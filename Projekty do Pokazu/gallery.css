@@ -53,21 +53,23 @@ nav{
 .nav-list a:hover{
     color: gray;
 }
+.burger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+  }
 
 .gallery{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 	grid-column-gap: 20px;
     grid-row-gap: 20px;
-}
-.gallery-in-out{
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 1s all ease-in-out;
-}
-.gallery-appear{
-    opacity: 1;
-    transform: translateY(0px);
 }
 
 .gallery img{
@@ -96,4 +98,81 @@ footer{
 }
 .nav-footer li{
     list-style: none;
+}
+
+@media screen and (max-width: 768px){
+    .logo{
+        right: 25px;
+        font-size: 18px;
+        font-style: italic;
+        text-transform: uppercase;
+       letter-spacing: 6px;
+        color: whitesmoke;
+        text-shadow: 3px 2px #20A4F3;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+    
+    .gallery img{
+        margin-top: 5%;
+        width: 97%;
+        height: 35vh;
+        
+    }
+    footer{
+        background-color: #03191E;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 10%;
+        min-height: 8vh;
+    }
+    .logofooter{
+        color: whitesmoke;
+        letter-spacing: 5px;
+    
+    }
+    .nav-footer{
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+    }
+    .nav-list {
+        position: absolute;
+        right: 0px;
+        height: 50vh;
+        top: 10vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+      }
+      .nav-list li {
+        opacity: 1;
+      }
+      .burger {
+        display: block;
+      }
+    
+      .nav-active {
+        transform: translateX(0%);
+      }
+    
+      @keyframes navLinkFade {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+      }
 }
