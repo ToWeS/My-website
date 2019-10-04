@@ -1,0 +1,99 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: white;
+}
+
+header{
+    background-image: url("Images/landscape-4518196_1920.jpg");
+    min-height: 10vh;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+}
+.logo{
+    right: 25px;
+    font-size: 25px;
+    font-style: italic;
+    text-transform: uppercase;
+   letter-spacing: 6px;
+    color: whitesmoke;
+    text-shadow: 3px 2px #20A4F3;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-list li{
+    list-style: none;
+}
+
+.nav-list a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-list a:hover{
+    color: gray;
+}
+
+.gallery{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.gallery-in-out{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s all ease-in-out;
+}
+.gallery-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.gallery img{
+	margin-top: 5%;
+	width: 100%;
+	height: 35vh;
+	
+}
+footer{
+    background-color: #03191E;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+}
+
+.logofooter{
+    color: whitesmoke;
+    letter-spacing: 5px;
+}
+
+.nav-footer{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+.nav-footer li{
+    list-style: none;
+}
